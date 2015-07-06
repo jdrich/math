@@ -145,6 +145,8 @@
     };
 
     var modal = function(text, type, next) {
+        jQuery('.main-modal').remove();
+
         jQuery('body').append('<div class="main-modal alert alert-' + type + '">' + text + '<a class="next" href="#"><span class="glyphicon glyphicon-play"></span></a></div>');
         jQuery('.main-modal').each(function() {
             jQuery(this).css('margin-left', (-(jQuery(this).width() / 2)) + 'px');

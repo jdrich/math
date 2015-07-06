@@ -2,8 +2,8 @@
 
 window.Config = (function () {
     var child = {
-        name: 'Aubrey',
-        birthday: new Date('June 23, 2008 00:00:00'),
+        name: 'Math Devotee',
+        birthday: new Date('January 1, 2000 00:00:00'),
         addRange: 20,
         multRange: 10,
     };
