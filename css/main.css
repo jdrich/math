@@ -1,0 +1,16 @@
+nav.navbar { border-radius: 0; }
+
+.controls .navbar-link { font-size: 42px; }
+
+.tile { min-height: 200px; padding-bottom: 30px; }
+.tile .btn { min-height: 200px; width: 100% }
+.tile-link { font-size: 128px; }
+
+.problem { text-align: right; font-family: monospace; font-size: 128px; }
+
+.problem .under { border-bottom: 6px solid #515151; }
+
+.problem input { text-align: right; display: block; width: 100%; }
+
+.main-modal { position: fixed; left: 50%; z-index: 1001; top: 100px; font-size: 42px; }
+.main-modal a { display: block; padding: 8px; font-size: 128px; text-align: center; }
