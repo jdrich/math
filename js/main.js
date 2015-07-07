@@ -57,6 +57,8 @@
         jQuery('input[name="answer"]').val('');
         var question = window.Game.create(type);
 
+        jQuery('input[name="answer"]').focus();
+
         render(question);
     };
 
@@ -145,16 +147,20 @@
     };
 
     var modal = function(text, type, next) {
+        jQuery('.modal-block').remove();
         jQuery('.main-modal').remove();
 
+        jQuery('body').append('<div class="modal-block"></div>');
         jQuery('body').append('<div class="main-modal alert alert-' + type + '">' + text + '<a class="next" href="#"><span class="glyphicon glyphicon-play"></span></a></div>');
         jQuery('.main-modal').each(function() {
             jQuery(this).css('margin-left', (-(jQuery(this).width() / 2)) + 'px');
         });
         jQuery('.main-modal .next').click( function() {
+            jQuery(this).parent().prev().remove();
             jQuery(this).parent().remove();
             next();
         });
+        jQuery('.main-modal .next').focus();
     };
 
     var attachAnswerListener = function () {
