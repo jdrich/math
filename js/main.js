@@ -30,9 +30,10 @@
     };
 
     var record = function(start, end) {
-        jQuery('.main').addClass('hidden');
-        jQuery('.game').addClass('hidden');
-        jQuery('.record').removeClass('hidden');
+        start = start || new Date().getTime();
+        end = end || new Date().getTime();
+
+        Record.records(start, end);
     };
 
     var startGame = function(set_type) {
