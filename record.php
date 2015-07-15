@@ -34,7 +34,7 @@ if(strlen($post)) {
             $data = explode("\n", file_get_contents($record_filename));
 
             foreach($data as $datum) {
-                $records[] = $datum;
+                strlen($datum) && $records[] = $datum;
             }
         }
 
